@@ -1,38 +1,142 @@
-.App {
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
   text-align: center;
+  color: #333;
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+ul {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+ul li button {
+  background-color: #355fdc;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+.editbtn{
+  background-color: #355fdc;
+}
+.deletebtn{
+  background-color: #c82333;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.serial-number {
+  font-size: 18px;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.contact-details p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-details p svg {
+  margin-right: 5px;
+}
+
+.contact-actions {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+
+@media only screen and (max-width: 600px) {
+  ul li {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .contact-actions {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.no-contacts {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  margin: 20px 0;
 }
+
+.contact-details svg {
+  color: #555; /* Change color of icons if needed */
+  font-size: 20px; /* Control icon size */
+}
+
+
